@@ -1,3 +1,4 @@
+import java.rmi.server.RemoteRef;
 
 /**
  * 
@@ -28,6 +29,8 @@
  * 
  */
 public class Bird {
+   
+
     /**
      * A variable (in this context, often referred to as a field), which represents the age of the bird.
      */
@@ -45,7 +48,14 @@ public class Bird {
      *         greater than or equal to 3.
      */
     public String sound(){
-        return "";
-    }
+      if(ageMonths < 3){
+       return "Tweet";
+      }else if(ageMonths >= 3){
+        //return "Chirp";
+      }
+
+       
+      return "Chirp";
+   }
 
 }
